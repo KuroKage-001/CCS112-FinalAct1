@@ -1,0 +1,133 @@
+/* Modern Design System */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+  --accent-color: #60a5fa;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-background: #ffffff;
+}
+
+/* General Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Modern Card Styles */
+.card {
+  background: var(--card-background);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Modern Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Style for Education */
+.timeline .card {
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
+.projects-section .card {
+  height: 100%;
+  overflow: hidden;
+}
+
+.badge {
+  padding: 0.5em 1em;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  border: none;
+}
+
+/* Contact Section */
+.contact-section .card {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Navigation Styles */
+.navbar {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--text-color) !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--primary-color) !important;
+}
+
+/* Footer Styles */
+footer {
+  margin-top: auto;
+  padding: 2rem 0;
+  background-color: var(--card-background);
+  border-top: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
